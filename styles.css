@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    /* Colors */
+    --color-background: #000000;
+    --color-border: #ff0000;
+    --color-text: #ffffff;
+    --color-button-bg: rgba(0, 0, 0, 0.6);
+    --color-button-hover: rgba(255, 0, 0, 0.3);
+
+     /* Font Size */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+    
+     /* Font Weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+     /* Border Radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+     /* Site max widht */
+    --site-max-width: 1300px;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background);
+}
+
+body::before {
+    content: '';
+    background-image: url('IMAGES/background-image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* start principal page */
+
+.logo {
+    max-width: var(--site-max-width);
+    margin-bottom: var(--font-size-xl);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--font-size-m);
+    justify-content: center;
+}
+
+.menu-button {
+    padding: var(--font-size-m) var(--font-size-xl);
+    font-size: var(--font-size-l);
+    background-color: var(--color-button-bg);
+    color: var(--color-text);
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-m);
+    cursor: pointer;
+    min-width: 250px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.menu-button:hover {
+    background-color: var(--color-button-hover);
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+/* end principal page */
+
+/* start hamburguesas page */
+
+.menu-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.menu-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* end hamburguesas page */
+
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+    .logo {
+        max-width: 250px;
+        margin-bottom: var(--font-size-l);
+    }
+    
+    .menu-button {
+        min-width: 220px;
+        font-size: var(--font-size-m);
+        padding: var(--font-size-n) var(--font-size-l);
+    }
+}
+
+@media (max-width: 900px) {
+    .logo {
+        max-width: 200px;
+        
+    }
+    
+    .menu-button {
+        min-width: 200px;
+        padding: var(--font-size-n) var(--font-size-l);
+    }
+}
+
+@media (max-width: 640px) {   
+    .menu-button {
+        min-width: 180px;
+        padding: var(--font-size-s) var(--font-size-m);
+        font-size: var(--font-size-s);
+    }
+    
+    .button-container {
+        gap: var(--font-size-s);
+    }
+}
+
