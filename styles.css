@@ -145,6 +145,32 @@ body::before {
     }
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        background-color: black; /* Fondo negro para los espacios vacíos */
+    }
+
+    .menu-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .menu-image {
+        width: 100%;
+        height: auto; /* Permite que la altura se ajuste manteniendo la proporción */
+        max-height: 100vh; /* Evita que la imagen sea más alta que la pantalla */
+        object-fit: contain; /* Mantiene la proporción y se asegura que toda la imagen sea visible */
+    }
+
+    .back-button {
+        top: 10px;
+        left: 10px;
+        padding: 8px 15px;
+    }
+}
+
 @media (max-width: 640px) {   
     .menu-button {
         min-width: 180px;
